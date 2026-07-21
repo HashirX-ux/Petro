@@ -14,6 +14,9 @@ Petro is an image generator that is created using html, css and javascript. I di
 **What I did today:**
 So I am gonna start by coding the basic structure of my web..So far so good..
 <img width="1280" height="687" alt="image" src="https://github.com/user-attachments/assets/f74aa560-8ac5-45ef-aa44-c15f1e05b5c2" />
+<br>
+So I finished my html gng and i think i didi fine for now. .Not that crazy its just simple..
+<img width="1280" height="1024" alt="image" src="https://github.com/user-attachments/assets/3f1528d5-0d04-448c-a218-70f4dbfc1088" />
 
 
 
