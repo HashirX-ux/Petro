@@ -19,7 +19,10 @@ So I finished my html gng and i think i didi fine for now. .Not that crazy its j
 <img width="1280" height="1024" alt="image" src="https://github.com/user-attachments/assets/3f1528d5-0d04-448c-a218-70f4dbfc1088" />
 Now I am gonna get started with the css.. 
 <img width="1280" height="497" alt="image" src="https://github.com/user-attachments/assets/14fdd1c1-28c1-4de1-934c-cdf06cbab4f8" />
-
+<br>
+So I finished some css styling on the wesbite and for now it looks sick: 
+<img width="1280" height="1024" alt="image" src="https://github.com/user-attachments/assets/781744f9-fc16-4288-b146-c67f4faedb35" />
+<
 
 
 
