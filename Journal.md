@@ -22,7 +22,9 @@ Now I am gonna get started with the css..
 <br>
 So I finished some css styling on the wesbite and for now it looks sick: 
 <img width="1280" height="1024" alt="image" src="https://github.com/user-attachments/assets/781744f9-fc16-4288-b146-c67f4faedb35" />
-<
+<br>
+Now gonna create some animations.. 
+
 
 
 
