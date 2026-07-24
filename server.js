@@ -76,4 +76,4 @@ app.post("/api/generate-image", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-module.exports = app;
+export default app;
