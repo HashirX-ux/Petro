@@ -1,31 +1,26 @@
 export default async function handler(req, res) {
-    // Enable CORS for safety
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
+    if (req.method === 'OPTIONS') return res.status(200).end();
 
     if (req.method !== "POST") {
         return res.status(405).json({ error: { message: "Method not allowed" } });
     }
 
-    const { prompt, aspect_ratio } = req.body || {};
-
-    if (!prompt) {
-        return res.status(400).json({ error: { message: "Missing prompt" } });
-    }
-
-    const HACKCLUB_API_KEY = process.env.HACKCLUB_API_KEY;
-    if (!HACKCLUB_API_KEY) {
-        return res.status(500).json({
-            error: { message: "No Hack Club AI key set on the server." }
-        });
-    }
-
     try {
+        const { prompt, aspect_ratio = "1:1" } = req.body || {};
+
+        if (!prompt) {
+            return res.status(400).json({ error: { message: "Missing prompt" } });
+        }
+
+        const HACKCLUB_API_KEY = process.env.HACKCLUB_API_KEY;
+        if (!HACKCLUB_API_KEY) {
+            return res.status(500).json({ error: { message: "API key not configured" } });
+        }
+
         const response = await fetch("https://ai.hackclub.com/proxy/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -36,7 +31,7 @@ export default async function handler(req, res) {
                 model: "google/gemini-2.5-flash-image",
                 modalities: ["image", "text"],
                 messages: [{ role: "user", content: prompt }],
-                image_config: { aspect_ratio: aspect_ratio || "1:1" }
+                image_config: { aspect_ratio }
             })
         });
 
@@ -47,10 +42,11 @@ export default async function handler(req, res) {
         }
 
         return res.json(data);
+
     } catch (err) {
-        console.error("API Error:", err);
+        console.error("Image generation error:", err);
         return res.status(500).json({ 
-            error: { message: err.message || "Internal server error" } 
+            error: { message: err.message || "Failed to generate image" } 
         });
     }
 }

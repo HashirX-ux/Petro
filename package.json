@@ -1,9 +1,5 @@
 {
   "name": "petro",
   "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "echo 'Running locally...'",
-    "build": "echo 'No build required'"
-  }
+  "type": "module"
 }
