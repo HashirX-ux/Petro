@@ -1,14 +1,9 @@
 {
-  "name": "petro-imagegen-proxy",
+  "name": "petro",
   "version": "1.0.0",
-  "description": "Local proxy server for Petro-ImageGen, keeps the Hack Club AI key off the client and avoids CORS.",
   "type": "module",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "cors": "^2.8.5"
+    "dev": "echo 'Running locally...'",
+    "build": "echo 'No build required'"
   }
 }

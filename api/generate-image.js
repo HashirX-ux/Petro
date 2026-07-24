@@ -1,4 +1,13 @@
 export default async function handler(req, res) {
+    // Enable CORS for safety
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     if (req.method !== "POST") {
         return res.status(405).json({ error: { message: "Method not allowed" } });
     }
@@ -27,7 +36,7 @@ export default async function handler(req, res) {
                 model: "google/gemini-2.5-flash-image",
                 modalities: ["image", "text"],
                 messages: [{ role: "user", content: prompt }],
-                image_config: { aspect_ratio }
+                image_config: { aspect_ratio: aspect_ratio || "1:1" }
             })
         });
 
@@ -39,6 +48,9 @@ export default async function handler(req, res) {
 
         return res.json(data);
     } catch (err) {
-        return res.status(500).json({ error: { message: err.message } });
+        console.error("API Error:", err);
+        return res.status(500).json({ 
+            error: { message: err.message || "Internal server error" } 
+        });
     }
 }
