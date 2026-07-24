@@ -98,7 +98,7 @@ async function generateImageCards(prompt, Mode, style, quality, resolution) {
     const imageGrid = document.createElement('div');
     imageGrid.className = "image-grid";
 
-    let count = 0;
+    let count = 1;
     const loadPromises = [];
 
     for(let i = 0; i <= count; i++) {
