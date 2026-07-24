@@ -2,7 +2,7 @@
 // straight to ai.hackclub.com — that API only allows browser requests from
 // its own allow-listed origins, so a direct fetch from your dev server gets
 // blocked by CORS. The proxy also keeps the API key off the client.
-const IMAGE_PROXY_ENDPOINT = "https://petro-imagegen-proxy.onrender.com/api/generate-image"; 
+const IMAGE_PROXY_ENDPOINT = "https://petro-imagegen-proxy.onrender.com/api/generate-image";
 
 // Maps your Resolution dropdown to the aspect ratio Gemini image gen accepts.
 function resolutionToAspectRatio(width, height) {

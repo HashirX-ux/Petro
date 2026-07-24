@@ -76,6 +76,4 @@ app.post("/api/generate-image", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log(`Image-gen proxy running at http://localhost:${PORT}`);
-});
+module.exports = app;
