@@ -27,9 +27,14 @@ Now gonna create some animations.. its decent I mean:
 <img width="1203" height="975" alt="image" src="https://github.com/user-attachments/assets/2697e8ca-562a-4efd-8b04-17e637fd9099" />
 Gonna custimise the promptt BOXXXX
 <img width="771" height="357" alt="image" src="https://github.com/user-attachments/assets/b7371df8-8566-4a04-a755-6ff80169db0e" />
+<br>
+<br>
 Its still casuing too much lag.. IDK what do Ib have to optimise... 
 <img width="553" height="893" alt="image" src="https://github.com/user-attachments/assets/b76e4977-832b-418c-8d65-1119af374151" />
-
+<br>
+<br>
+Its cooler but I want a smoother drop down mwnue for my web for I am gonna code that real quick .. I assume i only have to manipulate css file for this hopefully.. 
+<img width="609" height="904" alt="image" src="https://github.com/user-attachments/assets/06b60385-351a-44b4-acbc-207d0ed77994" />
 
 
 
