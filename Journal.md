@@ -25,6 +25,8 @@ So I finished some css styling on the wesbite and for now it looks sick:
 <br>
 Now gonna create some animations.. its decent I mean: 
 <img width="1203" height="975" alt="image" src="https://github.com/user-attachments/assets/2697e8ca-562a-4efd-8b04-17e637fd9099" />
+Gonna custimise the promptt BOXXXX
+<img width="771" height="357" alt="image" src="https://github.com/user-attachments/assets/b7371df8-8566-4a04-a755-6ff80169db0e" />
 
 
 
