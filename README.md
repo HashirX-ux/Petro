@@ -17,6 +17,10 @@ Its had the options to select the model and so I decided What if I can change th
 
 # How to use: 
 Its pretty simple you just gotta describe the image you wanna create and select from the options about what type of image you wanna create and there you go its that easy.. The options features is what sets it apart from others since in other models you gotta typeee the stuff you wanna generate and in this Just sleect the options and here you goo.. 
+<br>
+--> Go on: https://petro-kappa.vercel.app/
+<br>
+--> Describe the image and select options and BOOMM
 <img width="1199" height="1024" alt="image" src="https://github.com/user-attachments/assets/14230d8a-cc5e-45c4-84c0-902d7f6a3113" />
 
 # Problems that I faced: 
