@@ -35,6 +35,8 @@ Its still casuing too much lag.. IDK what do Ib have to optimise...
 <br>
 Its cooler but I want a smoother drop down mwnue for my web for I am gonna code that real quick .. I assume i only have to manipulate css file for this hopefully.. 
 <img width="609" height="904" alt="image" src="https://github.com/user-attachments/assets/06b60385-351a-44b4-acbc-207d0ed77994" />
+Since My other Api keys are getting exhausted really quick.. I am gonna use the Hackclub original api key for the image gen models.So gonna code that real quick: 
+
 
 
 
