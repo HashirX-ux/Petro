@@ -39,6 +39,9 @@ Since My other Api keys are getting exhausted really quick.. I am gonna use the 
 <br>
 <img width="987" height="267" alt="image" src="https://github.com/user-attachments/assets/cddff5b4-897b-4586-8e8b-45bf5ed1a489" />
 <br>
+Thats How you structue you code boisss
+<img width="1118" height="118" alt="image" src="https://github.com/user-attachments/assets/016c1562-20eb-4e37-bac1-6db105b33e53" />
+<br>
 
 
 
