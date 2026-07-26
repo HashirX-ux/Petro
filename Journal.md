@@ -42,6 +42,9 @@ Since My other Api keys are getting exhausted really quick.. I am gonna use the 
 Thats How you structue you code boisss
 <img width="1118" height="118" alt="image" src="https://github.com/user-attachments/assets/016c1562-20eb-4e37-bac1-6db105b33e53" />
 <br>
+Dint knew you could usee colors in js lol.. 
+<img width="619" height="324" alt="image" src="https://github.com/user-attachments/assets/a9e64aa5-21b5-4738-b352-504229a0d9dc" />
+<br>
 
 
 
