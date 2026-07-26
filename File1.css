@@ -7,8 +7,7 @@
 
 /* Body */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif ;
-    background-color: #0a0a0a;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: white;
     min-height: 100vh;
     line-height: 1.6;
@@ -29,61 +28,33 @@ body {
 .header h1{
     font-size: 3rem;
     font-weight: 700;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #ffffff, #888888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
-.header p {
-    font-size: 1.8rem;
-    color: grey;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Generator Section */
+/* Generator Section */ 
 .generator-section {
     background: #111111;
     border: 1px solid #333333;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem;
     margin-bottom: 2rem;
 }
-
-/* Results section (when the image is generated) */
-.input-group {
-    margin-bottom: 2.5rem;
-}
-
-.input-group label {
-    display: block; /*Push the text area a little down*/
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #cccccc;
-}
-
 
  /* The Input area */
 .prompt-input {
     width: 100%;
-    padding: 1rem;
+    padding: 0.85rem 1rem;
     background: #1a1a1a;
     border: 1px solid #333333;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.95rem;
     resize: vertical;
-    min-height: 120px;
-    transition: 0.3s ease;
-}
-
-/* Styling the fous when the input button is clicked.. */
-.prompt-input:focus {
-    outline: none;
-    border-color: #4a9eff;
-    box-shadow: 0 0 0 3px rgba(74, 150, 255, 0.1);
+    min-height: 90px;
+    max-height: 220px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* controls section */
@@ -94,11 +65,14 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.controls-group label{
+.controls-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: #cccccc;
+    font-size: 0.75rem;
+    color: #9a9aa5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
 }
 
 .control-input {
@@ -109,15 +83,20 @@ body {
     color: white;
     font-size: 0.9rem;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* For Focus */
-.control-input:focus {
-    outline: none;
-    border-color: #4a9eff;
-    box-shadow: 0 0 0 3px rgba(74, 150, 255, 0.1);
+.control-input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9aa5' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
 }
+
+
 
 /* Image Generate Button */
 .generate-btn {
@@ -134,17 +113,10 @@ body {
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;       
 }
 
-/* Covering the hover active.. */
-.generate-btn:hover{
-    background: #3a8eef;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(74, 158, 225, 0.1);
-}
 
 .generate-btn:active{
     transform: translateY(0);
@@ -208,13 +180,6 @@ body {
     perspective: 1000px;
 }
 
-.placeholder-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
-    opacity: 0.3;
-}
-
 /* Development in javascript */
 .image-grid {
     display: grid;
@@ -228,7 +193,7 @@ body {
     border: 1px solid #333333;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-card:hover{
@@ -273,12 +238,6 @@ body {
     font-size: 0.9rem;
 }
 
-.status-success {
-    background: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.1);
-}
-
 .status-error {
     background: rgba(239, 68, 68, 0.2);
     color: #ef4444;
@@ -312,11 +271,8 @@ body {
 
 .pod-floater {
     position: relative;
-    animation: float 6s ease-in-out infinite;
     z-index: 2;
     margin-bottom: 2rem;
-    /* Found this and it prevents hardware acceleration lag */
-    will-change: transform;
 }
 
 .pod-image {
@@ -330,27 +286,6 @@ body {
     will-change: transform;
 }
 
-.pod-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    height: 250px;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(74, 158, 255, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
-    z-index: 1;
-    animation: pulseGlow 4s ease-in-out infinite; 
-}
-
-@keyframes float {
-    0%, 100% {transform: translateY(0);}
-    50% {transform: translateY(-20px);}
-}
-
-@keyframes pulseGlow {
-    0%, 100% {transform: translate(-50%, -50%) scale(1); opacity: 0.5;}
-    50% {transform: translate(-50%, -50%) scale(1.3); opacity: 0.8;}
-}
 
 .typewriter-cursor {
     display: inline-block;
@@ -366,13 +301,14 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 24px;
-    color: #888888;
+    font-size: 1.15rem;
+    color: #9a9aa5;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 .word-carousel {
@@ -397,43 +333,6 @@ body {
     text-align: center;
 }
 
-/* WebGL scroll hero */
-.webgl-hero {
-    position: relative;
-    height: 300vh; /* scroll distance the pinned canvas plays through — raise/lower to change pace */
-    background: #000000;
-}
-
-.webgl-hero-inner {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* this is the element ScrollTrigger pins */
-    overflow: hidden;
-}
-
-#webgl-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.webgl-hero-text {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    opacity: 0.75;
-}
-
 @keyframes scrollVertical {
     0%, 15%   {transform: translateY(0);}
     20%, 35%  {transform: translateY(-30px);}
@@ -441,3 +340,154 @@ body {
     60%, 75%  {transform: translateY(-90px);}
     80%, 100% {transform: translateY(-120px);}
 }
+
+
+
+
+
+
+
+/* New Animations:: */
+/* aurora animations for the root... */
+:root {
+    --aurora-violet: #8b5cf6;
+    --aurora-coral: #ff7a68;
+    --aurora-cyan: #22d3ee;
+    --aurora-bg: #0d0b1e;
+    --aurora-glass: rgba(255, 255, 255, 0.05);
+    --aurora-border: rgba(255, 255, 255,0.12);
+}
+
+body {
+    background: var(--aurora-bg);
+    overflow-x: hidden;
+}
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 35vw;
+    height: 35vw;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+body::before {
+    top: -10%;
+    left: -10%;
+    background: var(--aurora-violet);
+    animation: auroraDrift1 22s ease-in-out infinite;
+}
+
+body::after {
+    bottom: -10%;
+    right: -10%;
+    background: var(--aurora-coral);
+    animation: auroraDrift2 26s ease-in-out infinite;
+}
+
+@keyframes auroraDrift1 {
+    0%, 100% {transform: translate(0, 0);}
+    50% {transform: translate(8%, 10%);}
+}
+
+@keyframes auroraDrift2 {
+    0%, 100% {transform: translate(0, 0);}
+    50% {transform: translate(-8%, -8%);}
+}
+
+.header h1 {
+    background: none;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+    text-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+}
+
+.typewriter-cursor {
+    color: var(--aurora-coral);
+    -webkit-text-fill-color: var(--aurora-coral);
+}
+
+.generator-section, .results-section {
+    position: relative;
+    background: #14121f;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+    contain: paint;
+}   
+
+.generator-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--aurora-violet), var(--aurora-cyan), var(--aurora-coral));
+    opacity: 0.4;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.prompt-input, .control-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--aurora-border);
+}
+
+.prompt-input:focus, .control-input:focus {
+    outline: none;
+    border-color: var(--aurora-violet);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+.control-input:focus { 
+    transform: translateY(-1px);
+}
+
+.generate-btn {
+    background: linear-gradient(135deg, var(--aurora-violet), var(--aurora-coral));
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+}
+
+.generate-btn:hover {
+    background-position: 100% 100%;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+}
+
+.pod-glow {
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.image-card {
+    animation: cardFadeUp 0.5s ease both;
+}
+
+.control-input option {
+    background: #1a1a1a;
+    color: white;
+}
+
+
+@keyframes cardFadeUp {
+    from {opacity: 0; transform: translateY(16px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before, body::after, .image-card, .generate-btn {animation: none !important; transition: none !important;}
+} 
+
+
