@@ -20,7 +20,7 @@ Its pretty simple you just gotta describe the image you wanna create and select 
 <br>
 --> Go on: https://petro-kappa.vercel.app/
 <br>
---> Describe the image and select options and BOOMM
+--> Please try to generate 2-3 times if it fails the first one ..
 <img width="1199" height="1024" alt="image" src="https://github.com/user-attachments/assets/14230d8a-cc5e-45c4-84c0-902d7f6a3113" />
 
 # Problems that I faced: 
